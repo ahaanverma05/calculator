@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Calculator </title>
+    <link rel="shortcut icon" href="https://help.apple.com/assets/5E3B0F66094622E068F02308/5E3B0F69094622E068F0230F/en_US/f19c7e914f0adb59c0833d00d09f1ea7.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: rgb(75, 69, 69);
+            text-align: center;
+        }
+        #result {
+            font-family: 'Syne', monospace;
+            font-size: 30px;
+        }
+        #First {
+            font-family: 'Syne', monospace;
+        }
+        #Second {
+            font-family: 'Syne', monospace;
+        }
+        hr {
+            width: 43%;
+            height: 3px;
+            background: rgb(255, 255, 255);
+        }
+        button {
+            font-family: 'Syne', monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <input id="First" type="number" placeholder="First Number:">
+
+    <input id="Second" type="number" placeholder="Second Number:">
+
+        <button onclick="giveresult()">Add</button>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="subtract()">Subtract</button>
+        <button onclick="divide()">Divide</button>
+
+    <hr>    
+    
+    <h1 id="result">Answer:<p id="resans"></p></h1>
+
+    <script>
+    function giveresult() {
+        var First = parseInt(document.getElementById("First").value)
+        var Second = parseInt(document.getElementById("Second").value)
+        document.getElementById("resans").innerHTML = First+Second;
+    }
+    function multiply() {
+        var First = parseInt(document.getElementById("First").value)
+        var Second = parseInt(document.getElementById("Second").value)
+        document.getElementById("resans").innerHTML = First*Second;
+    }
+    function subtract() {
+        var First = parseInt(document.getElementById("First").value)
+        var Second = parseInt(document.getElementById("Second").value)
+        document.getElementById("resans").innerHTML = First-Second;
+    }
+    function divide() {
+        var First = parseInt(document.getElementById("First").value)
+        var Second = parseInt(document.getElementById("Second").value)
+        document.getElementById("resans").innerHTML = First/Second;
+    }
+    </script>
+
+</body>
+</html>
